@@ -42,6 +42,8 @@ void Course::addStudent(const string& name)
 		{
 			students[i] = this->students[i];
 		}
+		delete [] this->students;
+		this->students = students;
 		students[numberOfStudents] = name;
 	}
 
